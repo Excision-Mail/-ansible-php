@@ -7,6 +7,7 @@ php_extensions:
   - 'php-pgsql'
   - 'php-curl'
   - 'php-pdo_pgsql'
+  - 'php-pdo_mysql'
   - 'php-imap'
   - 'php-ldap'
   - 'php-zip'
