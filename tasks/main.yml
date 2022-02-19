@@ -80,6 +80,13 @@
   when: resolv_conf_tail.stat.exists
   notify: restart php-fpm
 
+- name: copy /bin/sh into www chroot
+  copy:
+    src: /bin/sh
+    dest: /var/www/bin/sha256
+    remote_src: true
+    mode: preserve
+
 - name: enable php-fpm
   service:
     name: "{{ php_fpm }}"
